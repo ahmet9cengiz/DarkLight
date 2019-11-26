@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://NinjaBoy.gd" type="Script" id=1]
 [ext_resource path="res://images/ninjaBoy/Idle__000.png" type="Texture" id=2]
@@ -21,35 +21,10 @@
 [ext_resource path="res://images/ninjaBoy/Run_Right__007.png" type="Texture" id=19]
 [ext_resource path="res://images/ninjaBoy/Run_Right__008.png" type="Texture" id=20]
 [ext_resource path="res://images/ninjaBoy/Run_Right__009.png" type="Texture" id=21]
-[ext_resource path="res://images/ninjaBoy/Run_Left__000.png" type="Texture" id=22]
-[ext_resource path="res://images/ninjaBoy/Run_Left__001.png" type="Texture" id=23]
-[ext_resource path="res://images/ninjaBoy/Run_Left__002.png" type="Texture" id=24]
-[ext_resource path="res://images/ninjaBoy/Run_Left__003.png" type="Texture" id=25]
-[ext_resource path="res://images/ninjaBoy/Run_Left__004.png" type="Texture" id=26]
-[ext_resource path="res://images/ninjaBoy/Run_Left__005.png" type="Texture" id=27]
-[ext_resource path="res://images/ninjaBoy/Run_Left__006.png" type="Texture" id=28]
-[ext_resource path="res://images/ninjaBoy/Run_Left__007.png" type="Texture" id=29]
-[ext_resource path="res://images/ninjaBoy/Run_Left__008.png" type="Texture" id=30]
-[ext_resource path="res://images/ninjaBoy/Run_Left__009.png" type="Texture" id=31]
-[ext_resource path="res://images/ninjaBoy/Jump_Left__000.png" type="Texture" id=32]
-[ext_resource path="res://images/ninjaBoy/Jump_Left__001.png" type="Texture" id=33]
-[ext_resource path="res://images/ninjaBoy/Jump_Left__002.png" type="Texture" id=34]
-[ext_resource path="res://images/ninjaBoy/Jump_Left__003.png" type="Texture" id=35]
-[ext_resource path="res://images/ninjaBoy/Jump_Left__004.png" type="Texture" id=36]
-[ext_resource path="res://images/ninjaBoy/Jump_Left__006.png" type="Texture" id=37]
-[ext_resource path="res://images/ninjaBoy/Jump_Left__007.png" type="Texture" id=38]
-[ext_resource path="res://images/ninjaBoy/Jump_Left__008.png" type="Texture" id=39]
-[ext_resource path="res://images/ninjaBoy/Jump_Left__009.png" type="Texture" id=40]
-[ext_resource path="res://images/ninjaBoy/Jump_Right__000.png" type="Texture" id=41]
-[ext_resource path="res://images/ninjaBoy/Jump_Right__001.png" type="Texture" id=42]
-[ext_resource path="res://images/ninjaBoy/Jump_Right__002.png" type="Texture" id=43]
-[ext_resource path="res://images/ninjaBoy/Jump_Right__005.png" type="Texture" id=44]
-[ext_resource path="res://images/ninjaBoy/Jump_Right__003.png" type="Texture" id=45]
-[ext_resource path="res://images/ninjaBoy/Jump_Right__004.png" type="Texture" id=46]
-[ext_resource path="res://images/ninjaBoy/Jump_Right__006.png" type="Texture" id=47]
-[ext_resource path="res://images/ninjaBoy/Jump_Right__007.png" type="Texture" id=48]
-[ext_resource path="res://images/ninjaBoy/Jump_Right__008.png" type="Texture" id=49]
-[ext_resource path="res://images/ninjaBoy/Jump_Right__009.png" type="Texture" id=50]
+[ext_resource path="res://images/ninjaBoy/Jump_Right__009.png" type="Texture" id=22]
+[ext_resource path="res://images/ninjaBoy/Jump_Right__006.png" type="Texture" id=23]
+[ext_resource path="res://images/ninjaBoy/Jump_Right__007.png" type="Texture" id=24]
+[ext_resource path="res://images/ninjaBoy/Jump_Right__008.png" type="Texture" id=25]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -63,17 +38,12 @@ animations = [ {
 "name": "run",
 "speed": 15.0
 }, {
-"frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ) ],
+"frames": [ ExtResource( 22 ) ],
 "loop": true,
-"name": "runLeft",
+"name": "fall",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ) ],
-"loop": true,
-"name": "jumpLeft",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ) ],
+"frames": [ ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 22 ) ],
 "loop": true,
 "name": "jump",
 "speed": 10.0
@@ -98,8 +68,7 @@ __meta__ = {
 [node name="NinjaBoy" type="AnimatedSprite" parent="Player"]
 scale = Vector2( 0.712337, 0.905491 )
 frames = SubResource( 1 )
-animation = "jump"
-frame = 4
+animation = "fall"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 scale = Vector2( 18.64, 21.7387 )
