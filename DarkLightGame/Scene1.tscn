@@ -3,7 +3,7 @@
 [ext_resource path="res://Scene1.gd" type="Script" id=1]
 [ext_resource path="res://images/png/BG.png" type="Texture" id=2]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://flashLight.tscn" type="PackedScene" id=4]
+[ext_resource path="res://lightContainer.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 500, 10 )
@@ -37,6 +37,4 @@ scale = Vector2( 0.60815, -0.897981 )
 position = Vector2( 3.05176e-005, 0 )
 shape = SubResource( 1 )
 
-[node name="lightContainer" type="Node" parent="."]
-
-[node name="flashLight" parent="lightContainer" instance=ExtResource( 4 )]
+[node name="lightContainer" parent="." instance=ExtResource( 4 )]
