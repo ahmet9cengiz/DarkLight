@@ -39,6 +39,6 @@ func _physics_process(delta):
 		else:
 			$NinjaBoy.play("fall")
 		if friction == true:
-			motion.x = lerp(motion.x, 0, 0.04)
+			motion.x = lerp(motion.x, 0, 0.02)
 
 	motion = move_and_slide(motion, UP)
