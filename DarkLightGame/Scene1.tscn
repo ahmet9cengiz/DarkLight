@@ -34,7 +34,7 @@ rotation = 1.57079
 scale = Vector2( 0.60815, -0.897981 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="leftBoundary"]
-position = Vector2( 3.05176e-005, 0 )
+position = Vector2( 3.05176e-05, 0 )
 shape = SubResource( 1 )
 
 [node name="lightContainer" parent="." instance=ExtResource( 4 )]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/3868-hero-down-by-kevin-macleod.ogg-aa48342055acc647b4d54d85e805d36c.oggstr"
+
+[deps]
+
+source_file="res://audio/3868-hero-down-by-kevin-macleod.ogg"
+dest_files=[ "res://.import/3868-hero-down-by-kevin-macleod.ogg-aa48342055acc647b4d54d85e805d36c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
