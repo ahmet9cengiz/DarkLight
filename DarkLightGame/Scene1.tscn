@@ -38,3 +38,6 @@ position = Vector2( 3.05176e-05, 0 )
 shape = SubResource( 1 )
 
 [node name="lightContainer" parent="." instance=ExtResource( 4 )]
+
+[node name="Sprite" type="Sprite" parent="."]
+region_rect = Rect2( 1160, 220, 0, 0 )
