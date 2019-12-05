@@ -1,0 +1,229 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://images/png/Tiles/Bone (1).png" type="Texture" id=1]
+[ext_resource path="res://images/png/Tiles/Bone (2).png" type="Texture" id=2]
+[ext_resource path="res://images/png/Tiles/Bone (3).png" type="Texture" id=3]
+[ext_resource path="res://images/png/Tiles/Bone (4).png" type="Texture" id=4]
+[ext_resource path="res://images/png/Tiles/Tile (1).png" type="Texture" id=5]
+[ext_resource path="res://images/png/Tiles/Tile (2).png" type="Texture" id=6]
+[ext_resource path="res://images/png/Tiles/Tile (3).png" type="Texture" id=7]
+[ext_resource path="res://images/png/Tiles/Tile (4).png" type="Texture" id=8]
+[ext_resource path="res://images/png/Tiles/Tile (5).png" type="Texture" id=9]
+[ext_resource path="res://images/png/Tiles/Tile (6).png" type="Texture" id=10]
+[ext_resource path="res://images/png/Tiles/Tile (11).png" type="Texture" id=11]
+[ext_resource path="res://images/png/Tiles/Tile (10).png" type="Texture" id=12]
+[ext_resource path="res://images/png/Tiles/Tile (7).png" type="Texture" id=13]
+[ext_resource path="res://images/png/Tiles/Tile (8).png" type="Texture" id=14]
+[ext_resource path="res://images/png/Tiles/Tile (14).png" type="Texture" id=15]
+[ext_resource path="res://images/png/Tiles/Tile (15).png" type="Texture" id=16]
+[ext_resource path="res://images/png/Tiles/Tile (16).png" type="Texture" id=17]
+[ext_resource path="res://images/png/Tiles/Tile (12).png" type="Texture" id=18]
+[ext_resource path="res://images/png/Tiles/Tile (9).png" type="Texture" id=19]
+[ext_resource path="res://images/png/Tiles/Tile (13).png" type="Texture" id=20]
+[ext_resource path="res://images/png/Objects/Crate.png" type="Texture" id=21]
+[ext_resource path="res://images/png/Objects/Sign.png" type="Texture" id=22]
+[ext_resource path="res://images/png/Objects/Bush (1).png" type="Texture" id=23]
+[ext_resource path="res://images/png/Objects/Bush (2).png" type="Texture" id=24]
+[ext_resource path="res://images/png/Objects/ArrowSign.png" type="Texture" id=25]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 64.1227, 63.9427 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 64.0037, 64.0146 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 64.0284, 64.093 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 64.0061, 63.9583 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 63.9943, 63.9889 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 64.0173, 63.9979 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Skull1" type="Sprite" parent="."]
+position = Vector2( 1183.86, 162.933 )
+texture = ExtResource( 1 )
+
+[node name="Skull2" type="Sprite" parent="."]
+position = Vector2( 1677.5, 436.074 )
+texture = ExtResource( 2 )
+
+[node name="Bones1" type="Sprite" parent="."]
+position = Vector2( 1703.38, 537.89 )
+texture = ExtResource( 3 )
+
+[node name="Bones2" type="Sprite" parent="."]
+position = Vector2( 1693.46, 313.732 )
+texture = ExtResource( 4 )
+
+[node name="GroundLEdge" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 845.862, 883.996 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GroundLEdge"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GroundLEdge/StaticBody2D"]
+polygon = PoolVector2Array( -57.2788, -63.9376, -58.8065, -62.5372, -60.2706, -61.1367, -61.2255, -59.4817, -62.1803, -57.9539, -62.6895, -55.9806, -63.3261, -54.1982, -63.8353, -52.6705, -63.899, -50.8245, -64.09, -37.2021, -62.7535, -35.4073, -61.0984, -34.3251, -59.8254, -33.7522, -60.1436, -30.824, -60.2073, -28.4052, -59.6981, -26.4318, -58.3613, -23.7583, -56.8336, -21.1484, -57.9793, -16.1832, -60.8439, -6.12561, -60.9578, -1.14758, -61.0214, 2.48083, -61.0214, 4.7724, -58.9844, 9.35565, -56.0563, 13.6205, -55.8653, 15.9758, -56.3109, 18.1401, -60.0538, 25.1555, -61.1996, 27.1924, -61.1996, 28.6566, -61.0723, 32.6669, -60.8432, 41.1461, -60.4613, 44.7108, -60.4613, 48.7847, -63.5168, 57.1873, -63.8223, 58.3585, -63.8318, 63.8716, 63.9652, 63.899, 63.8397, -63.8264 )
+
+[node name="GroundMiddle" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 1192.53, 1005.33 )
+texture = ExtResource( 6 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GroundMiddle"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GroundMiddle/StaticBody2D"]
+position = Vector2( 0.0849609, 0.10199 )
+shape = SubResource( 1 )
+
+[node name="GroundREdge" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 1585.44, 956.464 )
+texture = ExtResource( 7 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GroundREdge"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GroundREdge/StaticBody2D"]
+polygon = PoolVector2Array( -63.9064, -63.8831, -63.948, 63.9635, 63.9902, 63.9664, 64.0604, 57.4011, 60.2021, 46.6133, 61.2764, 43.468, 61.4615, 37.7732, 61.1678, 26.8435, 59.8561, 24.1118, 56.0498, 17.9847, 56.0071, 14.2838, 60.282, 7.61664, 61.1274, 4.78906, 61.1274, -6.04498, 60.056, -9.76117, 58.803, -14.8139, 57.9078, -19.7371, 58.8956, -24.5244, 59.8833, -26.6234, 59.9695, -32.3921, 63.8586, -35.6639, 64.0503, -36.0806, 64.1433, -53.4401, 63.3871, -56.5884, 61.6432, -60.0455, 58.2015, -63.981 )
+
+[node name="UndergroundLEdge" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 914.799, 1044.04 )
+texture = ExtResource( 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="UndergroundLEdge"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="UndergroundLEdge/StaticBody2D"]
+polygon = PoolVector2Array( -63.809, -63.7502, -63.6657, -57.9465, -59.6533, -44.8344, -59.0084, -37.4543, -61.946, -9.15222, -61.9318, 1.9967, -61.5735, 7.44226, -53.262, 31.2303, -54.05, 39.5424, -63.4363, 58.4581, -63.9334, 58.7393, -63.9781, 63.9919, 63.9816, 63.9907, 64.0077, -63.9826, -63.974, -63.9565, -48.7046, -60.3651, -63.6536, -57.9081 )
+
+[node name="UnderGroundMiddle" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 1193.07, 1149.5 )
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="UnderGroundMiddle"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnderGroundMiddle/StaticBody2D"]
+shape = SubResource( 2 )
+
+[node name="UnderGroundREdge" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 1593.33, 1138.86 )
+texture = ExtResource( 10 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="UnderGroundREdge"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="UnderGroundREdge/StaticBody2D"]
+polygon = PoolVector2Array( 64.0109, -63.9524, 64.0785, -57.3425, 60.6112, -46.7351, 59.761, -33.3442, 60.8481, -23.0854, 61.355, -16.11, 62.1646, -3.09619, 62.2021, 7.12744, 55.2184, 24.4082, 53.8342, 35.4417, 57.6592, 46.2715, 64.0228, 57.5581, 64.0131, 64.0026, -63.9805, 64.0037, -63.9904, -63.9763 )
+
+[node name="GroundLowerLeft" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 1793.66, 1289.1 )
+texture = ExtResource( 11 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GroundLowerLeft"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GroundLowerLeft/StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="UnderGroundLowerLeft" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 1561.87, 1302.7 )
+texture = ExtResource( 12 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="UnderGroundLowerLeft"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnderGroundLowerLeft/StaticBody2D"]
+shape = SubResource( 4 )
+
+[node name="GroundLowerRight" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 741.944, 1137.52 )
+texture = ExtResource( 13 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GroundLowerRight"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GroundLowerRight/StaticBody2D"]
+shape = SubResource( 5 )
+
+[node name="UnderGroundLowerRight" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 933.26, 1234.65 )
+texture = ExtResource( 14 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="UnderGroundLowerRight"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnderGroundLowerRight/StaticBody2D"]
+shape = SubResource( 6 )
+
+[node name="FloatingGroundL" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 733.416, 580.364 )
+texture = ExtResource( 15 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="FloatingGroundL"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FloatingGroundL/StaticBody2D"]
+polygon = PoolVector2Array( -57.8449, -63.8706, -59.7527, -61.6903, -61.456, -59.476, -62.7505, -56.478, -63.5341, -54.2637, -63.9429, -52.1856, -64.1269, -37.4891, -62.0488, -35.4451, -59.4938, -33.6736, -59.2894, -30.5054, -58.5399, -27.0305, -54.7244, -20.3533, -49.4169, -15.0799, -41.0023, -11.2303, -33.1669, -10.2083, -20.5621, -9.83356, -17.5099, -8.07599, -15.0911, -5.69128, -12.8427, -1.97797, -11.1053, 2.07599, -7.67145, 6.70227, 3.94543, 13.7201, 22.2803, 23.8173, 33.6927, 27.6669, 45.6569, 29.2065, 60.3057, 29.3087, 63.9868, 29.3981, 63.9852, -63.9667, -57.8659, -63.9686 )
+
+[node name="FloatingGroundM" type="Sprite" parent="."]
+position = Vector2( 914.74, 580.182 )
+texture = ExtResource( 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="FloatingGroundM"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FloatingGroundM/StaticBody2D"]
+polygon = PoolVector2Array( 63.9855, -63.974, -63.9503, -64.0654, -64.05, 29.3337, -57.3323, 29.1674, -52.3938, 28.1697, -47.5052, 27.0889, -40.7344, 25.3064, -33.0524, 23.5272, -28.9486, 22.5328, -21.3497, 22.6825, -14.9313, 24.5947, -6.86682, 27.2718, 0.396423, 29.2939, 6.89795, 29.4935, 11.7432, 28.3727, 15.9999, 27.4914, 23.5324, 25.5626, 31.4276, 23.4975, 38.0455, 23.3146, 41.3679, 23.4014, 45.9904, 25.7792, 52.0798, 27.9509, 57.8995, 29.331, 64.0053, 29.4741, 64.0687, -63.2756 )
+
+[node name="FloatingGroundR" type="Sprite" parent="."]
+position = Vector2( 1092.96, 577.842 )
+texture = ExtResource( 17 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="FloatingGroundR"]
+
+[node name="FloatingGroundLowL" type="Sprite" parent="."]
+position = Vector2( 744.833, 1431.18 )
+texture = ExtResource( 18 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="FloatingGroundLowL"]
+
+[node name="FloatingGroundLowM" type="Sprite" parent="."]
+position = Vector2( 994.797, 1435.4 )
+texture = ExtResource( 19 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="FloatingGroundLowM"]
+
+[node name="FloatingGroundLowR" type="Sprite" parent="."]
+position = Vector2( 1211.19, 1449.28 )
+texture = ExtResource( 20 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="FloatingGroundLowR"]
+
+[node name="Crate" type="Sprite" parent="."]
+position = Vector2( 379.583, 643.453 )
+texture = ExtResource( 21 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Crate"]
+
+[node name="Sign" type="Sprite" parent="."]
+position = Vector2( 1498.87, 309.29 )
+texture = ExtResource( 22 )
+
+[node name="Bush1" type="Sprite" parent="."]
+position = Vector2( 870.554, 219.531 )
+texture = ExtResource( 23 )
+
+[node name="Bush2" type="Sprite" parent="."]
+position = Vector2( 437.981, 277.929 )
+texture = ExtResource( 24 )
+
+[node name="ArrowSign" type="Sprite" parent="."]
+position = Vector2( 1495.62, 115.713 )
+texture = ExtResource( 25 )

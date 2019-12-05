@@ -29,6 +29,7 @@ scale = Vector2( 0.60815, -0.897981 )
 position = Vector2( 3.05176e-005, 0 )
 shape = SubResource( 1 )
 
+<<<<<<< HEAD
 [node name="lightContainer" parent="." instance=ExtResource( 3 )]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -42,3 +43,9 @@ scale = Vector2( 0.57, 0.68 )
 z_index = -1
 texture = ExtResource( 4 )
 centered = false
+=======
+[node name="lightContainer" parent="." instance=ExtResource( 4 )]
+
+[node name="Sprite" type="Sprite" parent="."]
+region_rect = Rect2( 1160, 220, 0, 0 )
+>>>>>>> 7a581ed6c7c032005f58b97de96bbf5c7ef92d04
