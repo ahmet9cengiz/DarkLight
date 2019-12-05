@@ -16,7 +16,7 @@ script = ExtResource( 1 )
 
 [node name="follower" type="PathFollow2D" parent="path1"]
 position = Vector2( 480.283, 575.407 )
-rotation = -0.724998
+rotation = -1.01957
 __meta__ = {
 "_edit_group_": true
 }
