@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://images/png/BG.png" type="Texture" id=1]
+[ext_resource path="res://images/png/sky1.png" type="Texture" id=2]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 1024, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer"]
+scale = Vector2( 0.569, 0.68 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 1024, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer2"]
+modulate = Color( 0.239216, 0.290196, 0.52549, 1 )
+scale = Vector2( 0.534, 0.5 )
+texture = ExtResource( 2 )
+offset = Vector2( 959, -600 )

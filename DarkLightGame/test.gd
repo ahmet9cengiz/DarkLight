@@ -20,3 +20,4 @@ func spawnCoins(number):
 func _on_coin_grabbed():
 		score += 10
 		print(score)
+		#$lightMask.rotation_degrees -=10

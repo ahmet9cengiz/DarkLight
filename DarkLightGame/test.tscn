@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://test.gd" type="Script" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://background.tscn" type="PackedScene" id=3]
+[ext_resource path="res://lightContainer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://lightMask.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 487.219, 3.08452 )
@@ -20,3 +23,9 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
 shape = SubResource( 1 )
+
+[node name="ParallaxBackground" parent="." instance=ExtResource( 3 )]
+
+[node name="lightContainer" parent="." instance=ExtResource( 4 )]
+
+[node name="lightMask" parent="." instance=ExtResource( 5 )]
