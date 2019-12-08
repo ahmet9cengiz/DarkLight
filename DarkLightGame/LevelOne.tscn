@@ -57,7 +57,7 @@ extents = Vector2( 140, 70 )
 extents = Vector2( 130, 70 )
 
 [node name="Node2D" type="Node2D"]
-position = Vector2( -10, 2480 )
+position = Vector2( 40, 0 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -289,6 +289,7 @@ __meta__ = {
 
 [node name="StaticBody2D15" type="StaticBody2D" parent="TileMap"]
 editor/display_folded = true
+position = Vector2( 0, 30 )
 __meta__ = {
 "_edit_group_": true
 }

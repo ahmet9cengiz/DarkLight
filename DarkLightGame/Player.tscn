@@ -77,4 +77,4 @@ shape = SubResource( 2 )
 position = Vector2( 1656.58, -421.925 )
 current = true
 limit_top = 0
-limit_bottom = 0
+limit_bottom = 2500
