@@ -10,3 +10,7 @@ func _ready():
 	self.add_child(audioStream)
 	audioStream.stream = load("res://audio/4490-the-descent-by-kevin-macleod.ogg")
 	audioStream.play()
+	
+func _process(delta):
+  $HUD/Score.set_text("Pay Check: " + str(globalScript.score))
+  pass
