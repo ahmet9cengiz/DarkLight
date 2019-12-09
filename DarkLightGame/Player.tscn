@@ -74,9 +74,11 @@ scale = Vector2( 18.64, 21.7387 )
 shape = SubResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 920.539, -549.649 )
 z_index = 1
 current = true
+zoom = Vector2( 0.8, 0.8 )
 limit_left = 0
-limit_top = 0
-limit_bottom = 0
+limit_bottom = 608
+limit_smoothed = true
+smoothing_enabled = true
+editor_draw_drag_margin = true

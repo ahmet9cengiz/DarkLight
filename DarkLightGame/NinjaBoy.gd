@@ -3,7 +3,7 @@ extends KinematicBody2D
 const MAX_SPEED = 300
 const GRAVITY = 20
 const ACCELERATION = 30
-const JUMP_HEIGHT = -450
+const JUMP_HEIGHT = -500
 const UP = Vector2(0,-1)
 var motion = Vector2()
 var canMove = true #don't allow to change direction mid-air
