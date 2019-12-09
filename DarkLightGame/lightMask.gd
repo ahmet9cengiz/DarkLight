@@ -2,8 +2,10 @@ extends Light2D
 
 onready var effect = $lightMaskEffect
 
+signal game_over
+
 func _ready():
-	effect.interpolate_property(self, 'rotation_degrees', self.rotation_degrees, -90, 20, Tween.TRANS_QUAD, Tween.EASE_IN)
+	effect.interpolate_property(self, 'rotation_degrees', self.rotation_degrees, -90, 80, Tween.TRANS_QUAD, Tween.EASE_IN)
 	effect.start()
 
 func _process(delta):
@@ -11,4 +13,4 @@ func _process(delta):
 
 func _on_Area2D_body_exited(body):
 	if body.name == "Player":
-		print("Out of the shade!")
+		emit_signal("game_over")

@@ -42,3 +42,11 @@ func _physics_process(delta):
 			motion.x = lerp(motion.x, 0, 0.02)
 
 	motion = move_and_slide(motion, UP)
+
+
+
+
+func _on_NinjaBoy_animation_finished():
+	if $NinjaBoy.animation == "die":
+		$NinjaBoy.playing = false
+		$NinjaBoy.frame = 9
