@@ -13,5 +13,5 @@ texture = ExtResource( 2 )
 
 [node name="TextEdit" type="TextEdit" parent="."]
 show_behind_parent = true
-margin_right = 1030.0
-margin_bottom = 605.0
+margin_right = 1260.0
+margin_bottom = 782.0

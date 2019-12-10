@@ -12,3 +12,6 @@ func _ready():
 
 func _on_game_over():	
 	$Player.die()
+	
+	
+
