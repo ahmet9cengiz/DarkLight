@@ -14,7 +14,7 @@ See the DarkLight Wiki
 ## Software Engineering Plan:
 
     Our plan was to split the project in a way that it allowed each of us to develope our own strengths
-    in Godot/Game Development.
+    in Godot/Game Development.  We loosely handled task management through the projects tab in the repo.
     
     Ahmet's main focus was on building the complex interactions that would be occuring during the game.  
     He handled all aspects of the animation process: sprites,light detection, and all animation.
