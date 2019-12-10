@@ -8,13 +8,20 @@ const UP = Vector2(0,-1)
 var motion = Vector2()
 var canMove = true #don't allow to change direction mid-air
 
+
 func _ready():
 	pass
 	$effect.interpolate_property(self, 'modulate', Color(1,1,1,1), Color(1,1,1,0), 2, Tween.TRANS_QUAD, Tween.EASE_OUT)
 	
+	#load death sound so it is ready when player dies
 	var deathSound = AudioStreamPlayer.new()
 	self.add_child(deathSound)
 	deathSound.stream = load("res://audio/Pain-SoundBible.com-1883168362.ogg")
+	
+	#Set timer
+	#globalScript.deathCooldown.set_wait_time(3.0)
+	#globalScript.deathCooldown.one_shot = true
+
 
 
 func _physics_process(delta):
@@ -58,7 +65,15 @@ func _physics_process(delta):
 func die():
 	$effect.start()
 	$NinjaBoy.play("die")
-	$DeathSound.play()
+
+	if globalScript.life > 0:
+		$DeathSound.play()
+		globalScript.life -= 1
+	
+	if ($DeathDelay.time_left == 0):
+		get_tree().change_scene("TitleScreen.tscn")
+		
+	
 	set_physics_process(false) #stop moving
 
 func _on_NinjaBoy_animation_finished():

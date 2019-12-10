@@ -2,6 +2,7 @@ extends Control
 
 func _ready():
 	globalScript.score = 0
+	globalScript.life = 1
 	var audioStream =  AudioStreamPlayer.new()
 	self.add_child(audioStream)
 	audioStream.stream = load("res://audio/3868-hero-down-by-kevin-macleod.ogg")
