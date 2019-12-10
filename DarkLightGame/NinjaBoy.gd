@@ -8,9 +8,16 @@ const UP = Vector2(0,-1)
 var motion = Vector2()
 var canMove = true #don't allow to change direction mid-air
 
+func _ready():
+	pass
+	$effect.interpolate_property(self, 'modulate', Color(1,1,1,1), Color(1,1,1,0), 2, Tween.TRANS_QUAD, Tween.EASE_OUT)
+
 func _physics_process(delta):
 	motion.y += GRAVITY
 	var friction = false
+	
+	if position.y > 608:
+		$"/root/globalScript".emit_signal("game_over")
 	
 	if Input.is_action_pressed("ui_right"):
 		motion.x += ACCELERATION
@@ -43,8 +50,10 @@ func _physics_process(delta):
 
 	motion = move_and_slide(motion, UP)
 
-
-
+func die():
+	$effect.start()
+	$NinjaBoy.play("die")
+	set_physics_process(false) #stop moving
 
 func _on_NinjaBoy_animation_finished():
 	if $NinjaBoy.animation == "die":

@@ -82,7 +82,8 @@ __meta__ = {
 [node name="NinjaBoy" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.712337, 0.905491 )
 frames = SubResource( 1 )
-animation = "die"
+animation = "idle"
+frame = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2( 18.64, 21.7387 )
@@ -97,4 +98,7 @@ limit_bottom = 608
 limit_smoothed = true
 smoothing_enabled = true
 editor_draw_drag_margin = true
+
+[node name="effect" type="Tween" parent="."]
 [connection signal="animation_finished" from="NinjaBoy" to="." method="_on_NinjaBoy_animation_finished"]
+[connection signal="tween_completed" from="effect" to="." method="_on_effect_tween_completed"]

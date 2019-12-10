@@ -20,3 +20,4 @@ position = Vector2( 273.485, 411.594 )
 [node name="lightContainer" parent="." instance=ExtResource( 5 )]
 
 [node name="lightMask" parent="." instance=ExtResource( 6 )]
+visible = false

@@ -7,7 +7,7 @@ var score = 0
 func _ready():
 	randomize()
 	screensize = get_viewport().get_size()
-	$lightMask.connect("game_over", self, "_on_game_over")
+	$"/root/globalScript".connect("game_over", self, "_on_game_over")
 	set_process(true)
 	spawnCoins(4)
 	
@@ -24,5 +24,4 @@ func _on_coin_grabbed():
 
 
 func _on_game_over():	
-	$Player/NinjaBoy.play("die")
-	$Player.set_physics_process(false) #stop moving	
+	$Player.die()

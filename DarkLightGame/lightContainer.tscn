@@ -1,25 +1,232 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://path1.gd" type="Script" id=1]
+[ext_resource path="res://lightContainer.gd" type="Script" id=1]
 [ext_resource path="res://flashLight.tscn" type="PackedScene" id=2]
+
+[sub_resource type="Curve2D" id=2]
+_data = {
+"points": PoolVector2Array( 9.65767, 28.7725, -9.65767, -28.7725, 320.741, 415.138, 33.0964, 73.3877, -33.0964, -73.3877, 455.009, 321.504, 0, 79.1436, 0, -79.1436, 320.741, 226.103, -59.2138, 68.2074, 59.2138, -68.2074, 459.127, 156.342, -36.1183, -43.7448, 36.1183, 43.7448, 674.077, 125.402, -2.87795, -61.8759, 2.87795, 61.8759, 838.616, 257.517, 4.31692, -54.681, -4.31692, 54.681, 670.544, 314.437, 12.9508, -94.9723, -12.9508, 94.9723, 794.212, 411.604, -0.604008, 5.73251, 0.604008, -5.73251, 318.974, 415.138, 0, 0, 0, 0, 320.741, 415.138 )
+}
 
 [sub_resource type="Curve2D" id=1]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 480.283, 575.407, -92.6009, 0.954648, 92.6009, -0.954648, 633.981, 469.035, 0, 0, 0, 0, 801.045, 575.407, 0, 0, 0, 0, 480.283, 575.407 )
 }
 
-[node name="lightContainer" type="Node2D"]
+[sub_resource type="Curve2D" id=3]
+_data = {
+"points": PoolVector2Array( 25.7416, 61.6547, -25.7416, -61.6547, 889.952, 515.595, -24.5158, 66.166, 24.5158, -66.166, 889.952, 243.412, -12.2579, -40.6018, 12.2579, 40.6018, 972.08, 243.412, 22.0643, -30.0754, -22.0643, 30.0754, 974.531, 511.084, 0, 0, 0, 0, 889.952, 515.595 )
+}
 
-[node name="path1" type="Path2D" parent="."]
-curve = SubResource( 1 )
+[sub_resource type="Curve2D" id=4]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 1486.49, 511.399, 0, 0, 0, 0, 1484.89, 417.328, 0, 0, 0, 0, 1567.31, 419.666, 0, 0, 0, 0, 1569.53, 512.083, 0, 0, 0, 0, 1601.82, 516.536, 0, 0, 0, 0, 1600.71, 419.666, 0, 0, 0, 0, 1685.33, 417.439, 0, 0, 0, 0, 1687.56, 507.629, 0, 0, 0, 0, 1726.53, 510.969, 0, 0, 0, 0, 1726.53, 257.102, 0, 0, 0, 0, 1631.89, 223.699, 0, 0, 0, 0, 1533.9, 224.812, 0, 0, 0, 0, 1446.63, 257.885, 0, 0, 0, 0, 1451.41, 512.994, 0, 0, 0, 0, 1486.49, 511.399 )
+}
+
+[sub_resource type="Curve2D" id=5]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 1310.09, 513.923, 0, 0, 0, 0, 1312.04, 253.57, 0, 0, 0, 0, 1312.04, 513.923, 0, 0, 0, 0, 1310.09, 513.923 )
+}
+
+[sub_resource type="Curve2D" id=6]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 2051.61, 517.784, 0, 0, 0, 0, 2467.19, 515.186, 0, 0, 0, 0, 2051.61, 517.784 )
+}
+
+[sub_resource type="Curve2D" id=7]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 2559.35, 437.622, 0, 0, 0, 0, 2144.7, 437.622, 0, 0, 0, 0, 2559.14, 437.615, 0, 0, 0, 0, 2559.35, 437.622 )
+}
+
+[sub_resource type="Curve2D" id=8]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 2815.91, 513.443, 0, 0, 0, 0, 2815.91, 96.8977, 0, 0, 0, 0, 2815.91, 513.443 )
+}
+
+[sub_resource type="Curve2D" id=9]
+_data = {
+"points": PoolVector2Array( -6.02933, 5.02444, 6.02933, -5.02444, 3103.76, 62.9399, -4.01955, -48.2346, 4.01955, 48.2346, 3197.75, 135.109, -4.01955, -76.3715, 4.01955, 76.3715, 3039.98, 264.342, -2.00978, -63.308, 2.00978, 63.308, 3201.1, 388.539, 31.1515, 2.00978, -31.1515, -2.00978, 3103.76, 482.527, -3.01467, 59.2884, 3.01467, -59.2884, 3034.95, 383.504, -1.00489, 63.308, 1.00489, -63.308, 3196.07, 260.985, -8.03911, 45.22, 8.03911, -45.22, 3033.27, 135.109, 0, 0, 0, 0, 3103.6, 63.0023, 0, 0, 0, 0, 3103.76, 62.9399 )
+}
+
+[sub_resource type="Curve2D" id=10]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 3126.24, -192.912, 5.28889, 51.8311, -5.28889, -51.8311, 3213.55, -266.33, -1.05778, 53.9466, 1.05778, -53.9466, 3012.15, -379.398, -23.2711, 53.9466, 23.2711, -53.9466, 3228.61, -502.069, 31.7333, -30.6755, -31.7333, 30.6755, 3072.39, -643.866, 2.11555, -55.0044, -2.11555, 55.0044, 2987.41, -508.365, -5.28889, -57.12, 5.28889, 57.12, 3225.92, -382.931, 0, -63.4666, 0, 63.4666, 3029.81, -257.497, 0, 0, 0, 0, 3126.24, -194.869 )
+}
+
+[node name="lightContainer" type="Node2D"]
 script = ExtResource( 1 )
 
+[node name="path1" type="Path2D" parent="."]
+editor/display_folded = true
+curve = SubResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
 [node name="follower" type="PathFollow2D" parent="path1"]
+position = Vector2( 320.741, 415.138 )
+rotation = -1.56378
+
+[node name="flashLight" parent="path1/follower" instance=ExtResource( 2 )]
+position = Vector2( 0, 0 )
+
+[node name="follower2" type="PathFollow2D" parent="path1"]
+position = Vector2( 803.804, 206.285 )
+rotation = 0.64439
+offset = 933.308
+
+[node name="flashLight" parent="path1/follower2" instance=ExtResource( 2 )]
+position = Vector2( 0, 0 )
+
+[node name="path2" type="Path2D" parent="."]
+editor/display_folded = true
+position = Vector2( 134.268, -54.7671 )
+curve = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="follower" type="PathFollow2D" parent="path2"]
 position = Vector2( 480.283, 575.407 )
 rotation = -1.01957
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="flashLight" parent="path1/follower" instance=ExtResource( 2 )]
+[node name="flashLight" parent="path2/follower" instance=ExtResource( 2 )]
+position = Vector2( 0, 0 )
+
+[node name="path3" type="Path2D" parent="."]
+editor/display_folded = true
+position = Vector2( -54.3484, 22.0876 )
+scale = Vector2( 1.17391, 0.956909 )
+curve = SubResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="follower" type="PathFollow2D" parent="path3"]
+position = Vector2( 889.952, 515.595 )
+rotation = -1.94928
+
+[node name="flashLight" parent="path3/follower" instance=ExtResource( 2 )]
+position = Vector2( 0, 0 )
+
+[node name="path4" type="Path2D" parent="."]
+editor/display_folded = true
+position = Vector2( 84.6221, 33.4035 )
+curve = SubResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="follower" type="PathFollow2D" parent="path4"]
+position = Vector2( 1486.49, 511.399 )
+rotation = -1.58768
+
+[node name="flashLight" parent="path4/follower" instance=ExtResource( 2 )]
+position = Vector2( 0, 0 )
+
+[node name="path5" type="Path2D" parent="."]
+editor/display_folded = true
+curve = SubResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="follower" type="PathFollow2D" parent="path5"]
+position = Vector2( 1310.09, 513.923 )
+rotation = -1.56326
+
+[node name="flashLight" parent="path5/follower" instance=ExtResource( 2 )]
+position = Vector2( 0, 0 )
+
+[node name="path6" type="Path2D" parent="."]
+editor/display_folded = true
+position = Vector2( 90.9072, 0 )
+curve = SubResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="follower" type="PathFollow2D" parent="path6"]
+editor/display_folded = true
+position = Vector2( 2051.61, 517.784 )
+rotation = -0.00625965
+offset = 829.389
+
+[node name="flashLight" parent="path6/follower" instance=ExtResource( 2 )]
+position = Vector2( 0, 0 )
+
+[node name="path7" type="Path2D" parent="."]
+editor/display_folded = true
+curve = SubResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="follower" type="PathFollow2D" parent="path7"]
+position = Vector2( 2559.35, 437.622 )
+rotation = -3.14158
+
+[node name="flashLight" parent="path7/follower" instance=ExtResource( 2 )]
+position = Vector2( 0, 0 )
+
+[node name="path8" type="Path2D" parent="."]
+editor/display_folded = true
+position = Vector2( -67.8657, 0 )
+curve = SubResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="follower" type="PathFollow2D" parent="path8"]
+position = Vector2( 2815.91, 513.443 )
+rotation = -1.5708
+
+[node name="flashLight" parent="path8/follower" instance=ExtResource( 2 )]
+position = Vector2( 0, 0 )
+
+[node name="path9" type="Path2D" parent="."]
+editor/display_folded = true
+curve = SubResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="follower" type="PathFollow2D" parent="path9"]
+editor/display_folded = true
+position = Vector2( 3103.76, 62.9399 )
+rotation = -0.101686
+
+[node name="flashLight" parent="path9/follower" instance=ExtResource( 2 )]
+position = Vector2( 0, 0 )
+
+[node name="follower2" type="PathFollow2D" parent="path9"]
+editor/display_folded = true
+position = Vector2( 3124.81, 479.939 )
+rotation = 2.90226
+offset = 688.573
+
+[node name="flashLight" parent="path9/follower2" instance=ExtResource( 2 )]
+position = Vector2( 0, 0 )
+
+[node name="path10" type="Path2D" parent="."]
+curve = SubResource( 10 )
+
+[node name="follower" type="PathFollow2D" parent="path10"]
+editor/display_folded = true
+position = Vector2( 3126.24, -192.912 )
+rotation = -0.254377
+
+[node name="flashLight" parent="path10/follower" instance=ExtResource( 2 )]
+position = Vector2( 0, 0 )
+
+[node name="follower2" type="PathFollow2D" parent="path10"]
+editor/display_folded = true
+position = Vector2( 3091.21, -648.627 )
+rotation = -3.08374
+offset = 837.935
+
+[node name="flashLight" parent="path10/follower2" instance=ExtResource( 2 )]
 position = Vector2( 0, 0 )

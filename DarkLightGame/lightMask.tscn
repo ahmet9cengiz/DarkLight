@@ -7,8 +7,8 @@
 extents = Vector2( 519.085, 943.572 )
 
 [node name="lightMask" type="Light2D"]
-position = Vector2( -48.519, -1514.14 )
-scale = Vector2( 4.22554, -2.70198 )
+position = Vector2( -48.0966, -1322.62 )
+scale = Vector2( 4.22554, -2.60244 )
 texture = ExtResource( 1 )
 offset = Vector2( 562.5, -962 )
 texture_scale = 1.85
