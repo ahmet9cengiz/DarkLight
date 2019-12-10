@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://TitleScreen.gd" type="Script" id=1]
-[ext_resource path="res://images/png/BG.png" type="Texture" id=2]
+[ext_resource path="res://background.tscn" type="PackedScene" id=2]
 [ext_resource path="res://images/fonts/StarJedi-DGRW.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
@@ -28,44 +28,39 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0.501961 )
-scale = Vector2( 0.56882, 0.794089 )
-z_index = -1
-texture = ExtResource( 2 )
-centered = false
+[node name="ParallaxBackground" parent="." instance=ExtResource( 2 )]
 
 [node name="Start Game button" type="Button" parent="."]
-margin_left = 385.736
-margin_top = 199.857
-margin_right = 661.736
-margin_bottom = 308.857
+margin_left = 440.736
+margin_top = 192.857
+margin_right = 716.736
+margin_bottom = 301.857
 custom_fonts/font = SubResource( 1 )
 text = "Start"
 
 [node name="Quit Button" type="Button" parent="."]
-margin_left = 389.935
-margin_top = 340.427
-margin_right = 664.935
-margin_bottom = 449.427
+margin_left = 441.935
+margin_top = 344.427
+margin_right = 716.935
+margin_bottom = 453.427
 custom_fonts/font = SubResource( 1 )
 text = "Exit"
 script = SubResource( 2 )
 
 [node name="Credits" type="Button" parent="."]
-margin_left = 387.0
-margin_top = 472.879
-margin_right = 664.0
-margin_bottom = 581.879
+margin_left = 441.0
+margin_top = 483.879
+margin_right = 718.0
+margin_bottom = 592.879
 custom_fonts/font = SubResource( 3 )
 text = "Credits"
 
 [node name="TextEdit" type="TextEdit" parent="."]
 margin_top = 37.0
-margin_right = 1024.0
+margin_right = 1171.0
 margin_bottom = 149.0
 custom_fonts/font = SubResource( 4 )
-text = "            Dark Light"
+text = "              Dark Light"
 [connection signal="pressed" from="Start Game button" to="." method="_on_Start_Game_button_pressed"]
 [connection signal="pressed" from="Quit Button" to="." method="_on_Quit_Button_pressed"]
 [connection signal="pressed" from="Credits" to="." method="_on_Credits_pressed"]
