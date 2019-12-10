@@ -11,5 +11,5 @@ dest_files=[ "res://.import/122255__jivatma07__level-complete.ogg-e3ee4c8854e825
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

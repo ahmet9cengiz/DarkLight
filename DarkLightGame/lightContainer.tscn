@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://lightContainer.gd" type="Script" id=1]
 [ext_resource path="res://flashLight.tscn" type="PackedScene" id=2]
+[ext_resource path="res://LevelOne.tscn" type="PackedScene" id=3]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -50,7 +51,7 @@ _data = {
 
 [sub_resource type="Curve2D" id=10]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 3126.24, -192.912, 5.28889, 51.8311, -5.28889, -51.8311, 3213.55, -266.33, -1.05778, 53.9466, 1.05778, -53.9466, 3012.15, -379.398, -23.2711, 53.9466, 23.2711, -53.9466, 3228.61, -502.069, 31.7333, -30.6755, -31.7333, 30.6755, 3072.39, -643.866, 2.11555, -55.0044, -2.11555, 55.0044, 2987.41, -508.365, -5.28889, -57.12, 5.28889, 57.12, 3225.92, -382.931, 0, -63.4666, 0, 63.4666, 3029.81, -257.497, 0, 0, 0, 0, 3126.24, -194.869 )
+"points": PoolVector2Array( 0, 0, 0, 0, 3126.24, -192.912, 5.28889, 51.8311, -5.28889, -51.8311, 3213.55, -266.33, -1.05778, 53.9466, 1.05778, -53.9466, 3027.47, -384.319, -23.2711, 53.9466, 23.2711, -53.9466, 3218.47, -541.319, 31.7333, -30.6755, -31.7333, 30.6755, 3072.39, -643.866, 2.11555, -55.0044, -2.11555, 55.0044, 3014.47, -511.319, -5.28889, -57.12, 5.28889, 57.12, 3207.46, -423.18, 0, -63.4666, 0, 63.4666, 3029.81, -257.497, 0, 0, 0, 0, 3126.24, -194.869 )
 }
 
 [node name="lightContainer" type="Node2D"]
@@ -226,9 +227,11 @@ position = Vector2( 0, 0 )
 
 [node name="follower2" type="PathFollow2D" parent="path10"]
 editor/display_folded = true
-position = Vector2( 3090.68, -648.679 )
-rotation = -3.09706
+position = Vector2( 3055.46, -624.979 )
+rotation = 2.22128
 offset = 837.935
 
 [node name="flashLight" parent="path10/follower2" instance=ExtResource( 2 )]
 position = Vector2( 0, 0 )
+
+[node name="LevelOneMap" parent="." instance=ExtResource( 3 )]

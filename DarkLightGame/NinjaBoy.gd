@@ -8,6 +8,7 @@ const UP = Vector2(0,-1)
 var motion = Vector2()
 var canMove = true #don't allow to change direction mid-air
 
+var timer = null
 
 func _ready():
 	pass
@@ -18,9 +19,13 @@ func _ready():
 	self.add_child(deathSound)
 	deathSound.stream = load("res://audio/Pain-SoundBible.com-1883168362.ogg")
 	
-	#Set timer
-	#globalScript.deathCooldown.set_wait_time(3.0)
-	#globalScript.deathCooldown.one_shot = true
+	#Create timer
+	timer = Timer.new()
+	timer.set_one_shot(true)
+	timer.set_wait_time(1)
+	timer.connect("timeout", self, "on_timeout_complete")
+	add_child(timer)
+	
 
 
 
@@ -70,13 +75,10 @@ func die():
 		$DeathSound.play()
 		globalScript.life -= 1
 	
-	if ($DeathDelay.time_left == 0):
-		get_tree().change_scene("TitleScreen.tscn")
-		
-	
 	set_physics_process(false) #stop moving
 
 func _on_NinjaBoy_animation_finished():
 	if $NinjaBoy.animation == "die":
 		$NinjaBoy.playing = false
 		$NinjaBoy.frame = 9
+		get_tree().change_scene("TitleScreen.tscn")
