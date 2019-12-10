@@ -15,3 +15,8 @@ func _on_Start_Game_button_pressed():
 
 func _on_Quit_Button_pressed():
 	get_tree().quit()
+	
+
+
+func _on_Credits_pressed():
+	get_tree().change_scene("Credits.tscn")

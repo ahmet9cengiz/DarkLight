@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://TitleScreen.gd" type="Script" id=1]
 [ext_resource path="res://images/png/BG.png" type="Texture" id=2]
@@ -11,6 +11,12 @@ outline_color = Color( 0.164706, 0.168627, 0.121569, 1 )
 font_data = ExtResource( 3 )
 
 [sub_resource type="GDScript" id=2]
+
+[sub_resource type="DynamicFont" id=4]
+size = 60
+outline_size = 4
+outline_color = Color( 0.164706, 0.168627, 0.121569, 1 )
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 60
@@ -31,20 +37,28 @@ centered = false
 
 [node name="Start Game button" type="Button" parent="."]
 margin_left = 385.736
-margin_top = 245.207
+margin_top = 199.857
 margin_right = 661.736
-margin_bottom = 354.207
+margin_bottom = 308.857
 custom_fonts/font = SubResource( 1 )
 text = "Start"
 
 [node name="Quit Button" type="Button" parent="."]
-margin_left = 384.876
-margin_top = 371.868
-margin_right = 659.876
-margin_bottom = 480.868
+margin_left = 389.935
+margin_top = 340.427
+margin_right = 664.935
+margin_bottom = 449.427
 custom_fonts/font = SubResource( 1 )
 text = "Exit"
 script = SubResource( 2 )
+
+[node name="Credits" type="Button" parent="."]
+margin_left = 387.0
+margin_top = 472.879
+margin_right = 664.0
+margin_bottom = 581.879
+custom_fonts/font = SubResource( 4 )
+text = "Credits"
 
 [node name="TextEdit" type="TextEdit" parent="."]
 margin_top = 37.0
@@ -54,3 +68,4 @@ custom_fonts/font = SubResource( 3 )
 text = "            Dark Light"
 [connection signal="pressed" from="Start Game button" to="." method="_on_Start_Game_button_pressed"]
 [connection signal="pressed" from="Quit Button" to="." method="_on_Quit_Button_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_Credits_pressed"]

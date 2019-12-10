@@ -6,7 +6,7 @@ func _ready():
 func _process(delta):
 	$path1/follower.offset += 150 * delta
 	$path1/follower2.offset += 150 * delta
-	$path2/follower.offset += 250 * delta
+	$path2/follower.offset += 150 * delta
 	$path3/follower.offset += 250 * delta
 	$path4/follower.offset += 250 * delta
 	$path5/follower.offset += 250 * delta

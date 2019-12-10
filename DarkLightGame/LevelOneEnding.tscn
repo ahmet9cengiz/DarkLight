@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Node2D.gd" type="Script" id=1]
+[ext_resource path="res://images/fonts/StarJedi-DGRW.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[node name="LevelOneEnding" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="TextEdit" type="TextEdit" parent="."]
+margin_top = -2.0
+margin_right = 1030.0
+margin_bottom = 685.0
+custom_fonts/font = SubResource( 1 )
+text = "         
+		                                      You have done well to make it this far.                   
+			 You breached the prisons defenses and are one step closer to accomplishing your task.
+					         You must continue to be vigilant though, for you must never be seen.
+											The world must never know..... (Press enter)										"
+
+[node name="TextEdit2" type="TextEdit" parent="."]
+margin_left = 120.0
+margin_top = 253.0
+margin_right = 849.0
+margin_bottom = 445.0
+custom_fonts/font = SubResource( 2 )
+text = "                                 That Epstein did not kill himself
+								
+								
+								             Press Enter...
+			"

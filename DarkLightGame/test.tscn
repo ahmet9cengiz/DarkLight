@@ -13,6 +13,7 @@
 script = ExtResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 115.947, 499.202 )
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 3 )]
 
@@ -21,32 +22,32 @@ script = ExtResource( 1 )
 [node name="lightContainer" parent="." instance=ExtResource( 5 )]
 
 [node name="lightMask" parent="." instance=ExtResource( 6 )]
+position = Vector2( -272.787, -1101.57 )
 
 [node name="coinContainer" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( -2.58447, 0 )
 script = ExtResource( 7 )
 
 [node name="coin" parent="coinContainer" instance=ExtResource( 8 )]
-position = Vector2( 285.007, 253.126 )
+position = Vector2( 290.592, 231.406 )
 
 [node name="coin2" parent="coinContainer" instance=ExtResource( 8 )]
-position = Vector2( 619.637, 235.038 )
+position = Vector2( 785.328, 513.051 )
 
 [node name="coin3" parent="coinContainer" instance=ExtResource( 8 )]
-position = Vector2( 586.475, 34.5618 )
+position = Vector2( 594.542, 5.39526 )
 
 [node name="coin4" parent="coinContainer" instance=ExtResource( 8 )]
 position = Vector2( 1665.73, 519.925 )
 
 [node name="coin5" parent="coinContainer" instance=ExtResource( 8 )]
-position = Vector2( 495.947, 137.858 )
+position = Vector2( 517.667, 105.589 )
 
 [node name="coin6" parent="coinContainer" instance=ExtResource( 8 )]
-position = Vector2( 670.886, 99.3773 )
+position = Vector2( 677.092, 70.2108 )
 
 [node name="coin7" parent="coinContainer" instance=ExtResource( 8 )]
-position = Vector2( 753.79, 293.824 )
+position = Vector2( 837.566, 326.093 )
 
 [node name="coin8" parent="coinContainer" instance=ExtResource( 8 )]
 position = Vector2( 1248.2, 250.111 )
@@ -82,7 +83,7 @@ position = Vector2( 2977.11, 467.168 )
 position = Vector2( 3078.11, 201.876 )
 
 [node name="coin19" parent="coinContainer" instance=ExtResource( 8 )]
-position = Vector2( 2957.52, -73.9666 )
+position = Vector2( 2880.53, -67.6384 )
 
 [node name="coin20" parent="coinContainer" instance=ExtResource( 8 )]
 position = Vector2( 3153.47, -294.038 )
@@ -94,4 +95,4 @@ position = Vector2( 3045.45, -357.048 )
 position = Vector2( 3246.07, -496.381 )
 
 [node name="coin23" parent="coinContainer" instance=ExtResource( 8 )]
-position = Vector2( 3673.84, -645.002 )
+position = Vector2( 3496.7, -576.807 )
