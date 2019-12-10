@@ -3,12 +3,12 @@
 [ext_resource path="res://lightContainer.gd" type="Script" id=1]
 [ext_resource path="res://flashLight.tscn" type="PackedScene" id=2]
 
-[sub_resource type="Curve2D" id=2]
+[sub_resource type="Curve2D" id=1]
 _data = {
 "points": PoolVector2Array( 9.65767, 28.7725, -9.65767, -28.7725, 320.741, 415.138, 33.0964, 73.3877, -33.0964, -73.3877, 455.009, 321.504, 0, 79.1436, 0, -79.1436, 320.741, 226.103, -59.2138, 68.2074, 59.2138, -68.2074, 459.127, 156.342, -36.1183, -43.7448, 36.1183, 43.7448, 674.077, 125.402, -2.87795, -61.8759, 2.87795, 61.8759, 838.616, 257.517, 4.31692, -54.681, -4.31692, 54.681, 670.544, 314.437, 12.9508, -94.9723, -12.9508, 94.9723, 794.212, 411.604, -0.604008, 5.73251, 0.604008, -5.73251, 318.974, 415.138, 0, 0, 0, 0, 320.741, 415.138 )
 }
 
-[sub_resource type="Curve2D" id=1]
+[sub_resource type="Curve2D" id=2]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 480.283, 575.407, -92.6009, 0.954648, 92.6009, -0.954648, 633.981, 469.035, 0, 0, 0, 0, 801.045, 575.407, 0, 0, 0, 0, 480.283, 575.407 )
 }
@@ -58,7 +58,7 @@ script = ExtResource( 1 )
 
 [node name="path1" type="Path2D" parent="."]
 editor/display_folded = true
-curve = SubResource( 2 )
+curve = SubResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -72,7 +72,7 @@ position = Vector2( 0, 0 )
 
 [node name="follower2" type="PathFollow2D" parent="path1"]
 position = Vector2( 803.804, 206.285 )
-rotation = 0.64439
+rotation = 0.644393
 offset = 933.308
 
 [node name="flashLight" parent="path1/follower2" instance=ExtResource( 2 )]
@@ -81,7 +81,7 @@ position = Vector2( 0, 0 )
 [node name="path2" type="Path2D" parent="."]
 editor/display_folded = true
 position = Vector2( 134.268, -54.7671 )
-curve = SubResource( 1 )
+curve = SubResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -107,7 +107,7 @@ __meta__ = {
 
 [node name="follower" type="PathFollow2D" parent="path3"]
 position = Vector2( 889.952, 515.595 )
-rotation = -1.94928
+rotation = -1.94929
 
 [node name="flashLight" parent="path3/follower" instance=ExtResource( 2 )]
 position = Vector2( 0, 0 )
@@ -122,7 +122,7 @@ __meta__ = {
 
 [node name="follower" type="PathFollow2D" parent="path4"]
 position = Vector2( 1486.49, 511.399 )
-rotation = -1.58768
+rotation = -1.58777
 
 [node name="flashLight" parent="path4/follower" instance=ExtResource( 2 )]
 position = Vector2( 0, 0 )
@@ -151,8 +151,8 @@ __meta__ = {
 
 [node name="follower" type="PathFollow2D" parent="path6"]
 editor/display_folded = true
-position = Vector2( 2051.61, 517.784 )
-rotation = -0.00625965
+position = Vector2( 2051.78, 517.783 )
+rotation = -0.00624093
 offset = 829.389
 
 [node name="flashLight" parent="path6/follower" instance=ExtResource( 2 )]
@@ -167,7 +167,7 @@ __meta__ = {
 
 [node name="follower" type="PathFollow2D" parent="path7"]
 position = Vector2( 2559.35, 437.622 )
-rotation = -3.14158
+rotation = 3.14159
 
 [node name="flashLight" parent="path7/follower" instance=ExtResource( 2 )]
 position = Vector2( 0, 0 )
@@ -182,7 +182,7 @@ __meta__ = {
 
 [node name="follower" type="PathFollow2D" parent="path8"]
 position = Vector2( 2815.91, 513.443 )
-rotation = -1.5708
+rotation = -1.57086
 
 [node name="flashLight" parent="path8/follower" instance=ExtResource( 2 )]
 position = Vector2( 0, 0 )
@@ -197,15 +197,15 @@ __meta__ = {
 [node name="follower" type="PathFollow2D" parent="path9"]
 editor/display_folded = true
 position = Vector2( 3103.76, 62.9399 )
-rotation = -0.101686
+rotation = -0.101684
 
 [node name="flashLight" parent="path9/follower" instance=ExtResource( 2 )]
 position = Vector2( 0, 0 )
 
 [node name="follower2" type="PathFollow2D" parent="path9"]
 editor/display_folded = true
-position = Vector2( 3124.81, 479.939 )
-rotation = 2.90226
+position = Vector2( 3124.81, 479.938 )
+rotation = 2.90216
 offset = 688.573
 
 [node name="flashLight" parent="path9/follower2" instance=ExtResource( 2 )]
@@ -217,15 +217,15 @@ curve = SubResource( 10 )
 [node name="follower" type="PathFollow2D" parent="path10"]
 editor/display_folded = true
 position = Vector2( 3126.24, -192.912 )
-rotation = -0.254377
+rotation = -0.254361
 
 [node name="flashLight" parent="path10/follower" instance=ExtResource( 2 )]
 position = Vector2( 0, 0 )
 
 [node name="follower2" type="PathFollow2D" parent="path10"]
 editor/display_folded = true
-position = Vector2( 3091.21, -648.627 )
-rotation = -3.08374
+position = Vector2( 3090.68, -648.679 )
+rotation = -3.09706
 offset = 837.935
 
 [node name="flashLight" parent="path10/follower2" instance=ExtResource( 2 )]

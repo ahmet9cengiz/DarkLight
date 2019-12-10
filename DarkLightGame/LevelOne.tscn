@@ -61,7 +61,7 @@ extents = Vector2( 130, 70 )
 [sub_resource type="DynamicFont" id=19]
 font_data = ExtResource( 3 )
 
-[node name="Node2D" type="Node2D"]
+[node name="LevelOneMap" type="Node2D"]
 position = Vector2( 0, -60 )
 scale = Vector2( 0.25, 0.25 )
 script = ExtResource( 1 )

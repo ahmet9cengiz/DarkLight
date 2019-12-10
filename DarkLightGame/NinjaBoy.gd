@@ -11,6 +11,11 @@ var canMove = true #don't allow to change direction mid-air
 func _ready():
 	pass
 	$effect.interpolate_property(self, 'modulate', Color(1,1,1,1), Color(1,1,1,0), 2, Tween.TRANS_QUAD, Tween.EASE_OUT)
+	
+	var deathSound = AudioStreamPlayer.new()
+	self.add_child(deathSound)
+	deathSound.stream = load("res://audio/Pain-SoundBible.com-1883168362.ogg")
+
 
 func _physics_process(delta):
 	motion.y += GRAVITY
@@ -53,6 +58,7 @@ func _physics_process(delta):
 func die():
 	$effect.start()
 	$NinjaBoy.play("die")
+	$DeathSound.play()
 	set_physics_process(false) #stop moving
 
 func _on_NinjaBoy_animation_finished():

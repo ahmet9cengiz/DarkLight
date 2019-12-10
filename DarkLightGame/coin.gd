@@ -12,6 +12,7 @@ func _ready():
 func _on_coin_body_entered(body):
 	if body.get_name() == "Player":
 		emit_signal("coin_grabbed")
+		$coinCollect.play()
 		$CollisionShape2D.queue_free() #free the collision so that one coin can't be grabbed multiple times
 		effect.start()
 
