@@ -33,8 +33,8 @@ func _physics_process(delta):
 	motion.y += GRAVITY
 	var friction = false
 	
-	if position.y > 608:
-		$"/root/globalScript".emit_signal("game_over")
+	#if position.y > 608:
+	#	$"/root/globalScript".emit_signal("game_over")
 	
 	if Input.is_action_pressed("ui_right"):
 		motion.x += ACCELERATION

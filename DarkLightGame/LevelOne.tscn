@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://LevelOne.gd" type="Script" id=1]
 [ext_resource path="res://TileMap.tres" type="TileSet" id=2]
@@ -57,6 +57,9 @@ extents = Vector2( 140, 70 )
 
 [sub_resource type="RectangleShape2D" id=18]
 extents = Vector2( 130, 70 )
+
+[sub_resource type="SegmentShape2D" id=20]
+a = Vector2( 9691.24, -2594.57 )
 
 [sub_resource type="DynamicFont" id=19]
 font_data = ExtResource( 3 )
@@ -356,7 +359,6 @@ __meta__ = {
 }
 
 [node name="StaticBody2D14" type="StaticBody2D" parent="TileMap"]
-editor/display_folded = true
 position = Vector2( 1530, 2560 )
 __meta__ = {
 "_edit_group_": true
@@ -751,6 +753,18 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/StaticBody2D46"]
 shape = SubResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="TileMap"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/StaticBody2D10"]
+position = Vector2( 2864.85, 297.334 )
+shape = SubResource( 20 )
 __meta__ = {
 "_edit_group_": true
 }
