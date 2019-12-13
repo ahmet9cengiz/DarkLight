@@ -3,7 +3,7 @@
 <li>Executable</li>
 <ul><li>Requirements: The following executables are available</li></ul>
 <li>Download Godot from https://godotengine.org/download/windows then clone the repo and run the code locally</li>
-<li>Download the DarkLisght.exe and DarkLight.pck from the repository for windows executable</li>
+<li>Download the DarkLight.exe and DarkLight.pck from the repository for windows executable</li>
 <ul>Requirements: OpenGL 2.1 / OpenGL ES 2.0 compatible hardware</ul>
 
 </ul>
